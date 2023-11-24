@@ -1,13 +1,19 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>DFSK</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+ <script src="app.js"></script>
 </head>
-<body>
-  <app-root></app-root>
+<body ng-app="myApp">
+ <nav>
+    <ul>
+      <li><a href="#/home">Home</a></li>
+      <li><a href="#/contact">Contact</a></li>
+      <li><a href="#/about">About</a></li>
+    </ul>
+    <img src="src\assets\logo.png" alt="Logo">
+ </nav>
+ <div ng-view></div>
 </body>
 </html>
