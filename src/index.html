@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="stylesheet" type="text/css" href="styles.css">
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
- <script src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<script src="app.js"></script>
 </head>
+
+
 <body ng-app="myApp">
- <nav>
+<header>
+  <nav>
     <ul>
       <li><a href="#/home">Home</a></li>
       <li><a href="#/contact">Contact</a></li>
       <li><a href="#/about">About</a></li>
     </ul>
-    <img src="src\assets\logo.png" alt="Logo">
- </nav>
- <div ng-view></div>
+    <img src="src\assets\img\logo.png" alt="Logo">
+  </nav>
+</header>
+
+<img src="banner.jpg" alt="Banner gambar">
+
+<div class="marketplace">
+  <button>
+    <div class="item">
+      <img src="src\assets\img\shine.png" alt="SHINE">
+      <h2>SHINE</h2>
+      <p>-</p>
+      <p>SHINE</p>    
+    </div>
+  </button>
+
+  <button>
+    <div class="item">
+      <img src="src\assets\img\Gambar Mobil\shine-max.png" alt="SHINE MAX">
+      <h2>SHINE MAX</h2>
+      <p>-</p>
+      <p>SHINE MAX</p>    
+    </div>
+  </button>
+
+  <button>
+    <div class="item">
+      <img src="src\assets\img\Gambar Mobil\shine-gs.png" alt="SHINE GS">
+      <h2>SHINE GX</h2>
+      <p>-</p>
+      <p>SHINE GS</p>    
+    </div>
+  </button>
+
+  <button>
+    <div class="item">
+      <img src="huge.png" alt="HUGE">
+      <h2>HUGE</h2>
+      <p>-</p>
+      <p>HUGE</p>    
+    </div>
+  </button>
+
+  <button>
+    <div class="item">
+      <img src="src\assets\img\Gambar Mobil\ax7.png" alt="AX7">
+      <h2>AX7</h2>
+      <p>-</p>
+      <p>AX7</p>    
+    </div>
+  </button>
+
+</div>
+
+<div ng-view></div>
 </body>
 </html>
