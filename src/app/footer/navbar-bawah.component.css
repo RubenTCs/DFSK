@@ -32,10 +32,12 @@ footer{
     justify-content: center;
     gap: 25px;
     padding: 50px 0px;
+    
 }
 
 .pilihan a{
     padding: 5px 20px;
+    color: white;
 }
 
 .pilihan a:hover{
