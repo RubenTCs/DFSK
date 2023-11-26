@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from "./login/login.component";
+import { LoginComponent } from './login/login.component';
 
 @Component({
     selector: 'app-root',

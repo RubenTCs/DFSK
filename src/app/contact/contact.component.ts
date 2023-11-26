@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { NavbarBawahComponent } from "../navbar-bawah/navbar-bawah.component";
+import { NavbarBawahComponent } from "../footer/navbar-bawah.component";
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -13,5 +13,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 
 export class ContactComponent {
-  
+
 }
