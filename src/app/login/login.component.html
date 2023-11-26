@@ -5,7 +5,7 @@
             <input type="text" placeholder="Email / Username"/>
             <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Password"/>
             <div class="forgot">
-                <button type="button" (click)="showPassword = !showPassword">{{ showPassword ? 'Show' : 'Show' }} Password</button>
+                <button type="button" (click)="showPassword = !showPassword">{{ showPassword ? 'Show' : 'Hide' }} Password</button>
             </div>
             <a routerLink="/home"><button class="login">LOGIN</button></a>
         </form>
