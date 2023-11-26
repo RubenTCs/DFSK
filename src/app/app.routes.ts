@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ShowroomComponent } from './showroom/showroom.component';
 import { AboutComponent } from './about/about.component';
@@ -18,10 +17,9 @@ import { EmptyComponent } from './empty/empty.component';
 
 
 export const routes: Routes = [
-    {path: '', redirectTo: '/login', pathMatch: 'full'},
-    {path: 'login', component:LoginComponent},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component:HomeComponent},
-    {path: 'showroom', component: ShowroomComponent},
+    {path: 'showroom', component:ShowroomComponent},
     {path: 'about', component: AboutComponent},
     {path: 'contact', component:ContactComponent},
     {path: 'vehiclemodel', redirectTo: 'showroom', pathMatch: 'full'},
