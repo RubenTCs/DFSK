@@ -1,0 +1,55 @@
+<header class="navbar">
+    <app-navbar></app-navbar>
+</header>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-field-input">
+                <div class="form-field-data">
+                    <div class="data-left">
+                        <div class="form-field">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="data-right">
+                        <div class="form-field">
+                            <label for="cars">Choose a car:</label>
+                            <select name="cars" id="cars">
+                                <option value="" disabled selected>Select car</option>
+                                <option value="shinemax">Shine Max</option>
+                                <option value="huge">Huge</option>
+                                <option value="e70pro">E70 Pro (EV)</option>
+                                <option value="gxtractor">GX Tractor</option>
+                                <option value="vlct">VL Cargo Truck</option>
+                                <option value="specialtruck">Special Truck</option>
+                                <option value="passion">Voyah Passion</option>
+                                <option value="dream">Voyah Dream</option>
+                                <option value="free">Voyah Free</option>
+                                <option value="mhero">Mhero</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="country">Country:</label>
+                            <input type="text" id="country" name="country">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field-msg">
+                    <div class="form-field">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-field-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>

@@ -3,7 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ShowroomComponent } from './showroom/showroom.component';
 import { AboutComponent } from './about/about.component';
-// import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/contact.component';
 import { ShineMaxComponent } from './vehiclemodel/dongfengpv/shinemax/shinemax.component';
 import { HugeComponent } from './vehiclemodel/dongfengpv/huge/huge.component';
 import { E70ProComponent } from './vehiclemodel/dongfengpv/e70pro/e70pro.component';
@@ -23,7 +23,7 @@ export const routes: Routes = [
     {path: 'home', component:HomeComponent},
     {path: 'showroom', component: ShowroomComponent},
     {path: 'about', component: AboutComponent},
-    // {path: 'contact', component: ContactComponent}
+    {path: 'contact', component:ContactComponent},
     {path: 'vehiclemodel', redirectTo: 'showroom', pathMatch: 'full'},
     {path: 'vehiclemodel' ,component:EmptyComponent, children: [
         {path: 'shine-max', component: ShineMaxComponent},
