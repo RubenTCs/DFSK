@@ -1,0 +1,13 @@
+<body>
+    <div class="form">
+        <img src="../../assets/img/dfsk-logo.png" alt="Logo">
+        <form class="login-form">
+            <input type="text" placeholder="Email / Username"/>
+            <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Password"/>
+            <div class="forgot">
+                <button type="button" (click)="showPassword = !showPassword">{{ showPassword ? 'Hide' : 'Show' }} Password</button>
+            </div>
+            <a routerLink="/home"><button class="login">LOGIN</button></a>
+        </form>
+    </div>
+</body>
