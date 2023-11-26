@@ -23,6 +23,7 @@ export const routes: Routes = [
     {path: 'home', component:HomeComponent},
     {path: 'showroom', component: ShowroomComponent},
     {path: 'about', component: AboutComponent},
+    {path: 'contact', component:ContactComponent},
     {path: 'vehiclemodel', redirectTo: 'showroom', pathMatch: 'full'},
     {path: 'vehiclemodel' ,component:EmptyComponent, children: [
         {path: 'shine-max', component: ShineMaxComponent},
