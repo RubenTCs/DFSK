@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { NavbarBawahComponent } from "../navbar-bawah/navbar-bawah.component";
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 interface CarImages {
   [key: string]: string[];
@@ -12,25 +13,33 @@ interface CarImages {
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CommonModule, NavbarComponent, NavbarBawahComponent]
+    imports: [CommonModule, NavbarComponent, NavbarBawahComponent, RouterLink, RouterLinkActive, RouterOutlet]
 })
 
 export class HomeComponent {
   carImages: CarImages = {
-    'Dongfeng_PV': ['../../assets/img/placeholder3.jpg', '../../assets/img/placeholder3.jpg', '../../assets/img/placeholder3.jpg'],
-    'Dongfeng_CV': ['../../assets/img/placeholder3.jpg', '../../assets/img/placeholder3.jpg', '../../assets/img/placeholder3.jpg'],
-    'Voyah': ['../../assets/img/placeholder3.jpg'],
-    'Mhero': ['../../assets/img/placeholder3.jpg'],
+    'TopSeller': ['../../assets/img/showroom/dongfeng motor pv/shine max.png', '../../assets/img/showroom/voyah motor/voyah passion.png', '../../assets/img/showroom/mhero motor/mhero.png'],
   };
 
+  carNames: { [key: string]: string[]} = {
+    'TopSeller': ['SHINE MAX', 'VOYAH PASSION', 'MHERO'],
+  }
   
-  activeCar: string = 'Dongfeng_PV';
+  activeCar: string = 'TopSeller';
 
   changeCar(car: string) {
     const imageElements = document.querySelectorAll(`.carType-img img`) as NodeListOf<HTMLImageElement>;
+    const textElements = document.querySelectorAll(`.carNameStyle`) as NodeListOf<HTMLImageElement>;
+    
     imageElements.forEach((imageElement) => {
       if (imageElement) {
         imageElement.style.opacity = '0';
+      }
+    });
+
+    textElements.forEach((textElement) => {
+      if (textElement) {
+        textElement.style.opacity = '0';
       }
     });
     
@@ -43,20 +52,17 @@ export class HomeComponent {
           imageElement.style.opacity = '1';
         }
       });
-    }, 500);
-  }
-      
-  carLinks: { [key: string]: string } = {
-    'Dongfeng_PV': '#1',
-    'Dongfeng_CV': '#2',
-    'Voyah': '#3',
-    'Mhero': '#4',
-  };
 
-  buttonNames: { [key: string]: string} = {
-    'Dongfeng_PV': 'See More PV!',
-    'Dongfeng_CV': 'See More CV!',
-    'Voyah': 'See More Voyah!',
-    'Mhero': 'See More Mhero!',
+      textElements.forEach((textElement, index) => {
+        if (textElement && this.carImages[this.activeCar][index]) {
+          if (this.carImages[this.activeCar][index].trim() !== '') {
+            textElement.src = this.carImages[this.activeCar][index];
+            textElement.style.opacity = '1';
+          } else {
+            textElement.style.display = 'none';
+          }
+        }
+      });
+    }, 500);
   }
 }

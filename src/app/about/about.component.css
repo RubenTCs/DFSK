@@ -1,0 +1,77 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/assets/img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-name {
+    /* background-color: #333; */
+    color: #000;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 60pt;
+}
+
+.team-name {
+    font-size: 50pt;
+
+    .ngawi{
+        color: red;
+    }
+}
+
+
+
+.about-content {
+    max-width: auto;
+    margin: 30px auto;
+    text-align: center;
+    height: auto;
+}
+
+.descriptions {
+    margin: 70px 0px ;
+    line-height: 2em;
+    font-size: 15pt;
+}
+
+.developers {
+    font-size: 40pt;
+    margin: 30px 0;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-card {
+    width: 300px;
+    margin: 30px;
+    padding: 30px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-card p {
+    margin: 15px 0px;
+}
+
+.member-photo {
+    height: 250px;
+    width: 188px;
+    object-fit: cover;
+    margin: 20px auto;
+}

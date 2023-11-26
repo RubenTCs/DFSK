@@ -1,5 +1,4 @@
 .navbar{
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,10 +9,10 @@
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .logo{
-    /* border: 1px solid red; */
     margin-right: 3em;
     img{
         width: 150px;
@@ -22,7 +21,6 @@
 }
 
 .nav{
-    /* border: 1px solid blue; */
     display: flex;
     a {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

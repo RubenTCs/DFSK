@@ -1,9 +1,40 @@
-<link rel="stylesheet" href="showroom.component.css">
-
 <header class="navbar">
     <app-navbar></app-navbar>
 </header>
 <body>
-    <h1>Ini Showroom</h1>
+
+    <div class="bgimg">
+        <img src="../../assets/img/showroom/showroom-img.jpg" alt="showroom-img">
+    </div>
+    <div class="showroomComp">
+        <div class="modelMenu">
+            <div class="carType">
+                <div class="car-model" [ngClass]="{'active': activeCar === 'Dongfeng_PV'}" (click)="changeCar('Dongfeng_PV')">
+                    DONGFENG MOTOR (PV)
+                </div>
+                <div class="car-model" [ngClass]="{'active': activeCar === 'Dongfeng_CV'}" (click)="changeCar('Dongfeng_CV')">
+                    DONGFENG MOTOR (CV)
+                </div>
+                <div class="car-model" [ngClass]="{'active': activeCar === 'Voyah'}" (click)="changeCar('Voyah')">
+                    VOYAH MOTOR
+                </div>
+                <div class="car-model" [ngClass]="{'active': activeCar === 'Mhero'}" (click)="changeCar('Mhero')">
+                    MHERO MOTOR
+            </div>
+        </div>
+        <div class="carType-cont">
+            <div class="carType-img">
+                <div class="imgcont">
+                    <a routerLink="{{carLinks[activeCar][0]}}" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank"><img [src]="carImages[activeCar][0]" [alt]="carImages[activeCar][0] ? 'First img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][0] }}</span>
+                </div>
+                <div class="imgcont">
+                    <a routerLink="{{carLinks[activeCar][1]}}" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank"><img [src]="carImages[activeCar][1]" [alt]="carImages[activeCar][1] ? 'Second img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][1] }}</span>
+                </div>
+                <div class="imgcont">
+                    <a routerLink="{{carLinks[activeCar][2]}}" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank"><img [src]="carImages[activeCar][2]" [alt]="carImages[activeCar][2] ? 'Third img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][2] }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <app-navbar-bawah></app-navbar-bawah>
-</body>
+
