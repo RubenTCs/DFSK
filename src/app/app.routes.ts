@@ -13,23 +13,27 @@ import { PassionComponent } from './vehiclemodel/voyah/passion/passion.component
 import { DreamComponent } from './vehiclemodel/voyah/dream/dream.component';
 import { FreeComponent } from './vehiclemodel/voyah/free/free.component';
 import { MheroComponent } from './vehiclemodel/mhero/mhero.component';
+import { EmptyComponent } from './empty/empty.component';
 
 
 export const routes: Routes = [
-    {path: '', component:HomeComponent},
+    {path: '', redirectTo: '/home', pathMatch:'full'},
     {path: 'home', component:HomeComponent},
     {path: 'showroom', component: ShowroomComponent},
     {path: 'about', component: AboutComponent},
     // {path: 'contact', component: ContactComponent}
-    {path: 'shine-max', component: ShineMaxComponent},
-    {path: 'huge', component: HugeComponent},
-    {path: 'e70pro', component: E70ProComponent},
-    {path: 'gx-tractor', component: GXTractorComponent},
-    {path: 'vl-ct', component: VLCTComponent},
-    {path: 'special-truck', component: SpecialTruckComponent},
-    {path: 'passion', component: PassionComponent},
-    {path: 'dream', component: DreamComponent},
-    {path: 'free', component: FreeComponent},
-    {path: 'mhero', component: MheroComponent}
+    {path: 'vehiclemodel', redirectTo: 'showroom', pathMatch: 'full'},
+    {path: 'vehiclemodel' ,component:EmptyComponent, children: [
+        {path: 'shine-max', component: ShineMaxComponent},
+        {path: 'huge', component: HugeComponent},
+        {path: 'e70pro', component: E70ProComponent},
+        {path: 'gx-tractor', component: GXTractorComponent},
+        {path: 'vl-ct', component: VLCTComponent},
+        {path: 'special-truck', component: SpecialTruckComponent},
+        {path: 'passion', component: PassionComponent},
+        {path: 'dream', component: DreamComponent},
+        {path: 'free', component: FreeComponent},
+        {path: 'mhero', component: MheroComponent}
+    ]}
 ];
 
