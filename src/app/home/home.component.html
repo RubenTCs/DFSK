@@ -10,31 +10,24 @@
     
     <div class="modelMenu">
         <div class="carType">
-            <div class="car-model" [ngClass]="{'active': activeCar === 'Dongfeng_PV'}" (click)="changeCar('Dongfeng_PV')">
-                DONGFENG MOTOR (PV)
+            <div class="car-model" [ngClass]="{'active': activeCar === 'TopSeller'}" (click)="changeCar('TopSeller')">
+                TOP SELLER
             </div>
-            <div class="car-model" [ngClass]="{'active': activeCar === 'Dongfeng_CV'}" (click)="changeCar('Dongfeng_CV')">
-                DONGFENG MOTOR (CV)
-            </div>
-            <div class="car-model" [ngClass]="{'active': activeCar === 'Voyah'}" (click)="changeCar('Voyah')">
-                VOYAH MOTOR
-            </div>
-            <div class="car-model" [ngClass]="{'active': activeCar === 'Mhero'}" (click)="changeCar('Mhero')">
-                MHERO MOTOR
         </div>
     </div>
 
-    <div class="carType-img">
-        <div class="imgcont">
-            <img [src]="carImages[activeCar][0]" alt="First img">
+    <div class="carType-cont">
+        <div class="carType-img">
+            <div class="imgcont">
+                <a routerLink="/vehiclemodel{{carLinks[activeCar][0]}}" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][0]" [alt]="carImages[activeCar][0] ? 'First img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][0] }}</span>
+            </div>
+            <div class="imgcont">
+                <a routerLink="/vehiclemodel{{carLinks[activeCar][1]}}" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][1]" [alt]="carImages[activeCar][1] ? 'Second img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][1] }}</span>
+            </div>
+            <div class="imgcont">
+                <a routerLink="/vehiclemodel{{carLinks[activeCar][2]}}" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][2]" [alt]="carImages[activeCar][2] ? 'Third img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][2] }}</span>
+            </div>
         </div>
-        <div class="imgcont">
-            <img [src]="carImages[activeCar][1]" alt="Second img">
-        </div>
-        <div class="imgcont">
-            <img [src]="carImages[activeCar][2]" alt="Third img">
-        </div>
-        <a [href]="carLinks[activeCar]" class="more-button">{{ buttonNames[activeCar] }}</a>
     </div>
 
     <app-navbar-bawah></app-navbar-bawah>
