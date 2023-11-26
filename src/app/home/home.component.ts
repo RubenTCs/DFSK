@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { NavbarBawahComponent } from "../navbar-bawah/navbar-bawah.component";
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ShowroomComponent } from '../showroom/showroom.component';
 
 interface CarImages {
   [key: string]: string[];
@@ -13,7 +14,7 @@ interface CarImages {
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CommonModule, NavbarComponent, NavbarBawahComponent, RouterLink, RouterLinkActive, RouterOutlet]
+    imports: [CommonModule, NavbarComponent, NavbarBawahComponent, RouterLink, RouterLinkActive, RouterOutlet, ShowroomComponent]
 })
 
 export class HomeComponent {
@@ -23,6 +24,10 @@ export class HomeComponent {
 
   carNames: { [key: string]: string[]} = {
     'TopSeller': ['SHINE MAX', 'VOYAH PASSION', 'MHERO'],
+  }
+
+  carLinks: { [key: string]: string[]} = {
+    'TopSeller': ['/shine-max', '/passion', '/mhero'],
   }
   
   activeCar: string = 'TopSeller';
