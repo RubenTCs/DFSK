@@ -15,6 +15,7 @@ import { DreamComponent } from './vehiclemodel/voyah/dream/dream.component';
 import { FreeComponent } from './vehiclemodel/voyah/free/free.component';
 import { MheroComponent } from './vehiclemodel/mhero/mhero.component';
 
+
 export const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
     {path: 'login', component:LoginComponent},
@@ -33,3 +34,4 @@ export const routes: Routes = [
     {path: 'free', component: FreeComponent},
     {path: 'mhero', component: MheroComponent}
 ];
+
