@@ -19,13 +19,13 @@
     <div class="carType-cont">
         <div class="carType-img">
             <div class="imgcont">
-                <a routerLink="/vehiclemodel/shine-max" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][0]" [alt]="carImages[activeCar][0] ? 'First img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][0] }}</span>
+                <a routerLink="/vehiclemodel{{carLinks[activeCar][0]}}" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][0]" [alt]="carImages[activeCar][0] ? 'First img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][0] }}</span>
             </div>
             <div class="imgcont">
-                <a routerLink="/vehiclemodel/passion" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][1]" [alt]="carImages[activeCar][1] ? 'Second img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][1] }}</span>
+                <a routerLink="/vehiclemodel{{carLinks[activeCar][1]}}" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][1]" [alt]="carImages[activeCar][1] ? 'Second img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][1] }}</span>
             </div>
             <div class="imgcont">
-                <a routerLink="/vehiclemodel/mhero" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][2]" [alt]="carImages[activeCar][2] ? 'Third img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][2] }}</span>
+                <a routerLink="/vehiclemodel{{carLinks[activeCar][2]}}" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="carImages[activeCar][2]" [alt]="carImages[activeCar][2] ? 'Third img' : null"></a><span class="carNameStyle">{{ carNames[activeCar][2] }}</span>
             </div>
         </div>
     </div>
